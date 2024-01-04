@@ -37,8 +37,8 @@ public:
 	Fixed operator++(int); // 후위 연산자
 	Fixed operator--(int);
 
-	static Fixed& max(Fixed&, Fixed&); // 보조 함수
-	static Fixed& min(Fixed&, Fixed&);
+	static const Fixed& max(Fixed&, Fixed&); // 보조 함수
+	static const Fixed& min(Fixed&, Fixed&);
 	static const Fixed& max(const Fixed&, const Fixed&);
 	static const Fixed& min(const Fixed&, const Fixed&);
 
