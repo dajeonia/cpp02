@@ -21,13 +21,13 @@ Fixed &Fixed::operator=(const Fixed &f)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &f)
-		value = f.getRawBits();
+		value = f.value;
 	return (*this);
 }
 
 int Fixed::getRawBits(void) const
 {
-// 	std::cout << "getRawBits member function called" << std::endl;
+ 	std::cout << "getRawBits member function called" << std::endl;
 	return (value);
 }
 
@@ -56,7 +56,7 @@ float Fixed::toFloat(void) const
 
 int Fixed::toInt(void) const
 {
-	return (value >> 8);
+	return (value >> bits);
 }
 
 std::ostream& operator<<(std::ostream& os, const Fixed& f)
